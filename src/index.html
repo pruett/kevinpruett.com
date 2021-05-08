@@ -61,11 +61,21 @@
             color: var(--color-gray);
         }
 
-
         header {
             margin: 10rem 0;
             display: flex;
             justify-content: center;
+        }
+
+        main {
+            font-size: 3.5rem;
+            line-height: 1.4;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
         }
 
         .kp {
@@ -79,7 +89,7 @@
 
         .grid {
             display: grid;
-            grid-template-columns: 1fr min(65ch, calc(100% - 4rem)) 1fr;
+            grid-template-columns: 1fr min(85ch, calc(100% - 4rem)) 1fr;
             grid-column-gap: 2rem;
         }
 
@@ -87,9 +97,8 @@
             grid-column: 2;
         }
 
-        main {
-            font-size: 3.5rem;
-            line-height: 1.4;
+        footer {
+            margin: 10rem 0;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -106,15 +115,7 @@
                 fill: var(--color-white);
             }
         }
-
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
     </style>
-
     <body>
         <div class="grid">
             <header>
@@ -133,16 +134,23 @@
                 </svg>
             </header>
             <main>
-                I <strong>write software</strong> and <strong>design interfaces</strong> to amplify the human
-                experience. <i>I believe</i> in automating tedium in exchange for
-                creativity. <i>I am hopeful</i> in the role technology can play in
-                aiding our ability to make better decisions.
+                <h1>I write software and design interfaces</h1>
+                <h2>
+                    <i>I believe</i> in automating tedium in exchange for
+                    creativity. <i>I am hopeful</i> in the role technology can
+                    play in amplifying the human experience.
+                </h2>
             </main>
-            <ul class="links">
-                <li><a href="https://twitter.com/pruett">Twitter</a></li>
-                <li><a href="https://github.com/pruett">GitHub</a></li>
-                <li><a href="https://linkedin.com/in/pruett">LinkedIn</a></li>
-            </ul>
+            <footer>
+                <div>Meet</div>
+                <a href="https://calendly.com/pruett/1-1">Calendly</a>
+
+                <div>Subscribe</div>
+                <a href="https://twtitter.com/pruett">twitter</a>
+
+                <div>Code</div>
+                <a href="https://github.com/pruett">github</a>
+            </footer>
         </div>
     </body>
 </html>
