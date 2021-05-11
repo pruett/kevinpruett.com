@@ -2,36 +2,53 @@
 ---
 
 <style>
-    main {
-        font-size: 3.5rem;
-        line-height: 1.4;
-    }
-
-    h1 {
-        font-size: 4.75rem;
-        letter-spacing: -1.5px;
+    .headline {
         font-weight: 600;
-        margin: 0;
+        font-size: 2.25rem;
+        line-height: 1.2;
+        letter-spacing: -1px;
+        margin: 0 0 1rem;
     }
 
-    h2 {
-        font-size: 3rem;
+    .byline {
         font-weight: 400;
+        font-size: 2rem;
         margin: 0;
+        line-height: 1.25;
+        color: var(--color-gray);
     }
 
-    .ampersand {
-        font-size: 7rem;
-        color: var(--color-gray);
-        font-weight: 200;
+    @media (min-width: 860px) {
+        .headline {
+            font-size: 3rem;
+            letter-spacing: -1.5px;
+        }
+
+        .byline {
+            font-size: 2.45rem;
+        }
     }
+
+    @media (min-width: 1040px) {
+        .headline {
+            font-size: 4rem;
+        }
+
+        .byline {
+            font-size: 3.15rem;
+            letter-spacing: -1px;
+            font-weight: 300;
+        }
+    }
+
+
 
 
 </style>
 
-<main>
-    <h1>I write software <span class="ampersand">&</span> design interfaces</h1>
-    <h2>
+<main class="container">
+    <h1 class="headline">I write software and design interfaces</h1>
+    <h2 class="byline">
         I believe in automating tedium in exchange for
         creativity. I am hopeful in the role technology can
         play in amplifying the human experience.

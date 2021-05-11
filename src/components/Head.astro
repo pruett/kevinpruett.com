@@ -1,6 +1,6 @@
 ---
-export let title = 'Kevin Pruett – writes software & designs interfaces'
-export let description = 'Kevin Pruett writes software & designs interfaces to amplify the human experience'
+export let title = 'Kevin Pruett – software developer and user interface designer'
+export let description = 'Kevin Pruett writes software and designs interfaces to amplify the human experience'
 ---
 
 <style>
@@ -30,6 +30,8 @@ export let description = 'Kevin Pruett writes software & designs interfaces to a
     }
 
     html {
+        /* set base font-size to 10px (62.5% of 16px/browser default size) */
+        /* use `rem` to set future font-sizes on 10px scale */
         font-size: 62.5%;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
@@ -42,7 +44,21 @@ export let description = 'Kevin Pruett writes software & designs interfaces to a
         font-weight: 400;
         background-color: var(--background-color-light);
         color: var(--color-slate);
-        font-size: 1.6rem;
+        font-size: 2rem;
+    }
+
+    @media (min-width: 860px) {
+        body {
+            font-size: 2.4rem;
+            line-height: 1.6666666667;
+        }
+    }
+
+    @media (min-width: 1040px) {
+        body {
+            font-size: 2.8rem;
+            line-height: 1.6071428571;
+        }
     }
 
     :global(a) {
@@ -63,10 +79,7 @@ export let description = 'Kevin Pruett writes software & designs interfaces to a
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-        name="description"
-        content={description}
-    />
+    <meta name="description" content="{description}" />
     <meta name="robots" content="index,follow" />
     <meta name="googlebot" content="index,follow" />
     <link rel="icon" href="favicon.svg" />

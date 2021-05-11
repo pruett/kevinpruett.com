@@ -10,21 +10,20 @@
         padding: 0;
     }
 
-    .headline.astro-n31rkg6Y {
-        font-size: 2.75rem;
+    .header.astro-n31rkg6Y {
         font-weight: 600;
+        line-height: 1;
     }
 
-    a.astro-n31rkg6Y {
-        font-size: 2.75rem;
-        font-weight: 400;
+    .link.astro-n31rkg6Y {
+        font-weight: 600;
         text-decoration: none;
     }
 
-    li.astro-n31rkg6Y {
+    .item.astro-n31rkg6Y {
         margin-top: 2rem;
     }
 
-    li.astro-n31rkg6Y:nth-child(1) {
+    .item.astro-n31rkg6Y:nth-child(1) {
         margin-top: 0;
     }

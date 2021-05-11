@@ -1,27 +1,44 @@
 
 
-    main.astro-mtKLoJop {
-        font-size: 3.5rem;
-        line-height: 1.4;
-    }
-
-    h1.astro-mtKLoJop {
-        font-size: 4.75rem;
-        letter-spacing: -1.5px;
+    .headline.astro-mtKLoJop {
         font-weight: 600;
-        margin: 0;
+        font-size: 2.25rem;
+        line-height: 1.2;
+        letter-spacing: -1px;
+        margin: 0 0 1rem;
     }
 
-    h2.astro-mtKLoJop {
-        font-size: 3rem;
+    .byline.astro-mtKLoJop {
         font-weight: 400;
+        font-size: 2rem;
         margin: 0;
+        line-height: 1.25;
+        color: var(--color-gray);
     }
 
-    .ampersand.astro-mtKLoJop {
-        font-size: 7rem;
-        color: var(--color-gray);
-        font-weight: 200;
+    @media (min-width: 860px) {
+        .headline.astro-mtKLoJop {
+            font-size: 3rem;
+            letter-spacing: -1.5px;
+        }
+
+        .byline.astro-mtKLoJop {
+            font-size: 2.45rem;
+        }
     }
+
+    @media (min-width: 1040px) {
+        .headline.astro-mtKLoJop {
+            font-size: 4rem;
+        }
+
+        .byline.astro-mtKLoJop {
+            font-size: 3.15rem;
+            letter-spacing: -1px;
+            font-weight: 300;
+        }
+    }
+
+
 
 
