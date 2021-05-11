@@ -1,0 +1,22 @@
+
+
+    header.astro-zvkshqHn {
+        margin: 10rem 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .kp.astro-zvkshqHn {
+        width: 50px;
+        height: 100%;
+    }
+
+    .kp.astro-zvkshqHn path.astro-zvkshqHn {
+        fill: var(--color-slate);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .kp.astro-zvkshqHn path.astro-zvkshqHn {
+            fill: var(--color-white);
+        }
+    }

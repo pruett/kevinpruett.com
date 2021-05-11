@@ -1,0 +1,30 @@
+
+
+    footer.astro-n31rkg6Y {
+        margin: 10rem 0;
+    }
+
+    ul.astro-n31rkg6Y {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .headline.astro-n31rkg6Y {
+        font-size: 2.75rem;
+        font-weight: 600;
+    }
+
+    a.astro-n31rkg6Y {
+        font-size: 2.75rem;
+        font-weight: 400;
+        text-decoration: none;
+    }
+
+    li.astro-n31rkg6Y {
+        margin-top: 2rem;
+    }
+
+    li.astro-n31rkg6Y:nth-child(1) {
+        margin-top: 0;
+    }
