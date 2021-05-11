@@ -38,23 +38,9 @@
         margin: 0;
         padding: 0;
         font-weight: 400;
+        font-size: 2rem;
         background-color: var(--background-color-light);
         color: var(--color-slate);
-        font-size: 2rem;
-    }
-
-    @media (min-width: 860px) {
-        body {
-            font-size: 2.4rem;
-            line-height: 1.6666666667;
-        }
-    }
-
-    @media (min-width: 1040px) {
-        body {
-            font-size: 2.8rem;
-            line-height: 1.6071428571;
-        }
     }
 
     a {
@@ -68,5 +54,24 @@
     @media (prefers-color-scheme: dark) {
         a {
             color: var(--color-light-blue);
+        }
+
+        body {
+            background-color: var(--background-color-dark);
+            color: var(--color-white);
+        }
+    }
+
+    @media (min-width: 860px) {
+        body {
+            font-size: 2.4rem;
+            line-height: 1.6666666667;
+        }
+    }
+
+    @media (min-width: 1040px) {
+        body {
+            font-size: 2.8rem;
+            line-height: 1.6071428571;
         }
     }
