@@ -29,7 +29,7 @@ export let description = 'Kevin Pruett writes software and designs interfaces to
             segoe ui emoji, segoe ui symbol, sans-serif;
     }
 
-    html {
+    :global(html) {
         /* set base font-size to 10px (62.5% of 16px/browser default size) */
         /* use `rem` to set future font-sizes on 10px scale */
         font-size: 62.5%;
@@ -38,7 +38,7 @@ export let description = 'Kevin Pruett writes software and designs interfaces to
         font-family: var(--font-family);
     }
 
-    body {
+    :global(body) {
         margin: 0;
         padding: 0;
         font-weight: 400;
@@ -60,21 +60,21 @@ export let description = 'Kevin Pruett writes software and designs interfaces to
             color: var(--color-light-blue);
         }
 
-        body {
+        :global(body) {
             background-color: var(--background-color-dark);
             color: var(--color-white);
         }
     }
 
     @media (min-width: 860px) {
-        body {
+        :global(body) {
             font-size: 2.4rem;
             line-height: 1.6666666667;
         }
     }
 
     @media (min-width: 1040px) {
-        body {
+        :global(body) {
             font-size: 2.8rem;
             line-height: 1.6071428571;
         }
