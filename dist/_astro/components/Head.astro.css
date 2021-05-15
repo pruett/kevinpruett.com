@@ -13,7 +13,7 @@
 
     :root {
         --color-white: #fafafa;
-        --color-gray: #aaa;
+        --color-gray: #727272;
         --color-light-blue: #15beec;
         --color-blue: #009ec9;
         --color-slate: #222;
@@ -48,7 +48,7 @@
     }
 
     a:hover {
-        color: var(--color-gray);
+        color: var(--color-light-blue);
     }
 
     @media (prefers-color-scheme: dark) {
