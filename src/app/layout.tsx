@@ -25,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
       >
+        {/*<div className="grid min-w-svw min-h-dvh grid-cols-[2.5rem_repeat(6,minmax(0,1fr))_2.5rem] lg:grid-cols-[2.5rem_repeat(12,minmax(0,1fr))_2.5rem] gap-4">*/}
         {children}
+        {/*</div>*/}
       </body>
     </html>
   );
