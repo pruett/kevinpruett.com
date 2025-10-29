@@ -1,0 +1,46 @@
+"use client";
+
+import { ClockIcon } from "@radix-ui/react-icons";
+import { Suspense, useEffect, useState } from "react";
+
+export function LocalTimeClock() {
+  return (
+    <Suspense fallback={<Clock>00:00:00</Clock>}>
+      <HeaderTime />
+    </Suspense>
+  );
+}
+
+function HeaderTime() {
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const formattedTime = currentTime.toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+    timeZone: "America/New_York",
+  });
+
+  return <Clock>{formattedTime}</Clock>;
+}
+
+function Clock({ children }: { children: React.ReactNode }) {
+  return (
+    <div
+      className="font-mono text-sm font-medium flex items-center gap-1"
+      suppressHydrationWarning
+    >
+      <ClockIcon />
+      {children}
+    </div>
+  );
+}
