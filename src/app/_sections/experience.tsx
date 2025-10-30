@@ -11,7 +11,11 @@ export function Experience() {
     >
       <h2 className="font-medium text-lg">Experience</h2>
 
-      <Accordion type="single" collapsible className="w-full">
+      <Accordion
+        type="single"
+        collapsible
+        className="w-full border-b border-dashed mb-3"
+      >
         <ExperienceItem
           value="prime"
           dateRange="2023 - 2025"
