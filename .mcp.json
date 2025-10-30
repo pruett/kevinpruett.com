@@ -1,11 +1,16 @@
 {
   "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["playwright@latest", "mcp"]
+    },
+    "nextjs": {
+      "command": "npx",
+      "args": ["next-devtools-mcp"]
+    },
     "shadcn": {
       "command": "npx",
-      "args": [
-        "shadcn@latest",
-        "mcp"
-      ]
+      "args": ["shadcn@latest", "mcp"]
     }
   }
 }
