@@ -1,4 +1,3 @@
-import { GlobeIcon } from "@radix-ui/react-icons";
 import { Badge } from "@/components/ui/badge";
 import { LocalTimeClock } from "./local-time-clock";
 import { ThemeToggle } from "./theme-toggle";
@@ -9,21 +8,17 @@ export function Header() {
       <div className="flex h-14 items-center justify-between px-6">
         <Badge
           variant="outline"
-          className="badge-shimmer gap-2.5 py-1.5 text-[0.625rem] font-mono uppercase tracking-wide text-muted-foreground hover:text-muted-foreground/80 transition-colors"
+          className="badge-shimmer gap-2.5 py-1.5 text-[0.625rem] font-mono uppercase tracking-wide text-muted-foreground hover:text-muted-foreground/80 transition-colors px-3"
         >
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500 animate-glow-pulse"></span>
+          <span className="relative flex size-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+            <span className="relative inline-flex size-2 rounded-full bg-green-500"></span>
           </span>
           Available for hire
         </Badge>
         <div className="flex items-center gap-3">
           <div className="flex items-center border-r pr-3 gap-3">
             <LocalTimeClock />
-            <div className="font-mono text-xs uppercase text-muted-foreground tracking-tight flex gap-1 items-center">
-              <GlobeIcon />
-              Florida, USA
-            </div>
           </div>
           <ThemeToggle />
         </div>

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
+import { Header } from "@/components/header";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -35,6 +36,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased`}
       >
         <NextThemesProvider attribute="class" defaultTheme="light" enableSystem>
+          <Header />
           {children}
           <Toaster position="bottom-right" />
         </NextThemesProvider>

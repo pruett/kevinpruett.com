@@ -5,7 +5,7 @@ import { Suspense, useEffect, useState } from "react";
 
 export function LocalTimeClock() {
   return (
-    <Suspense fallback={<Clock>00:00:00</Clock>}>
+    <Suspense fallback={<Clock>00:00:00 GMT</Clock>}>
       <HeaderTime />
     </Suspense>
   );
@@ -30,13 +30,21 @@ function HeaderTime() {
     timeZone: "America/New_York",
   });
 
-  return <Clock>{formattedTime}</Clock>;
+  // Get timezone abbreviation (EST/EDT)
+  const timeZoneAbbr = currentTime
+    .toLocaleTimeString("en-US", {
+      timeZone: "America/New_York",
+      timeZoneName: "short",
+    })
+    .split(" ")[2];
+
+  return <Clock>{`${formattedTime} ${timeZoneAbbr}`}</Clock>;
 }
 
 function Clock({ children }: { children: React.ReactNode }) {
   return (
     <div
-      className="font-mono text-sm font-medium flex items-center gap-1"
+      className="font-mono text-xs font-medium flex items-center gap-1"
       suppressHydrationWarning
     >
       <ClockIcon />
