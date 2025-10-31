@@ -13,13 +13,13 @@ export function Intro() {
       </div>
       <div className="flex flex-col gap-4">
         <p className="dark:font-light text-base animate-fade-in [--stagger:3]">
-          I architect interfaces that are thoughtful, reliable, and performant.
-          I care deeply about the details that quietly shape extraordinary
-          digital experiences.
+          I build interfaces that are thoughtful, reliable, and performant. I
+          care deeply about the details that quietly shape extraordinary digital
+          experiences.
         </p>
         <p className="animate-fade-in [--stagger:4]">
-          In the past, my work has led me across a number of industries and
-          verticals &mdash; from&nbsp;
+          In the past, I&rsquo;ve led teams, shaped products, and built systems
+          across a range of industries and verticals &mdash; from&nbsp;
           <Link
             className="link"
             href="https://www.vicemedia.com/"
@@ -27,20 +27,19 @@ export function Intro() {
           >
             digital agencies
           </Link>
-          &nbsp;and{" "}
+          &nbsp;and&nbsp;
           <Link className="link" href="https://warbyparker.com" target="_blank">
             e-commerce
           </Link>
-          , to{" "}
+          , to&nbsp;
           <Link className="link" href="https://hashicorp.com" target="_blank">
             developer tooling
-          </Link>{" "}
-          and&nbsp;
+          </Link>
+          &nbsp; and&nbsp;
           <Link className="link" href="https://ro.co" target="_blank">
             healthcare
           </Link>
-          . I&rsquo;ve led teams, shaped products, and built systems that have
-          delivered significant impact.
+          .
         </p>
       </div>
     </section>

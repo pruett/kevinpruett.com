@@ -44,10 +44,10 @@ function HeaderTime() {
 function Clock({ children }: { children: React.ReactNode }) {
   return (
     <div
-      className="font-mono text-xs font-medium flex items-center gap-1"
+      className="font-mono text-xs font-medium flex items-center gap-2"
       suppressHydrationWarning
     >
-      <ClockIcon />
+      <ClockIcon className="size-3 text-muted-foreground" />
       {children}
     </div>
   );

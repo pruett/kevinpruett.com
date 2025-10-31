@@ -16,7 +16,7 @@ export default function Home() {
         id="projects"
         className="animate-fade-in [--stagger:7] flex flex-col gap-2"
       >
-        <h2>Projects</h2>
+        <h2 className="font-medium text-lg">Projects</h2>
         <p className="text-muted-foreground text italic font-serif">
           Coming soon...
         </p>
@@ -27,28 +27,18 @@ export default function Home() {
         id="writing"
         className="animate-fade-in [--stagger:7] flex flex-col gap-2"
       >
-        <h2>Writing</h2>
+        <h2 className="font-medium text-lg">Writing</h2>
         <p className="text-muted-foreground text italic font-serif">
           Coming soon...
         </p>
       </section>
-
-      {/* Now */}
-      {/*<section className="animate-fade-in [--stagger:11]">
-        <h2>Now</h2>
-        <p>
-          Currently focused on exploring new technologies and building
-          meaningful projects. Interested in design systems, developer tools,
-          and creating delightful user experiences.
-        </p>
-      </section>*/}
 
       {/* Connect */}
       <section
         id="connect"
         className="animate-fade-in [--stagger:7] flex flex-col gap-2"
       >
-        <h2>Connect</h2>
+        <h2 className="font-medium text-lg">Connect</h2>
         <div className="flex flex-wrap gap-4">
           <Link
             href="https://github.com/pruett"
