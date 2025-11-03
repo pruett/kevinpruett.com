@@ -36,7 +36,7 @@ export function Experience() {
           dateRange="2020 - 2023"
           title="Senior Software Engineer"
           company="Ro"
-          description="Transformed the diagnostics platform from static PDFs into an interactive health dashboard, achieving a 200%+ increase in user engagement and 1.75x improvement in interaction rates. Developed a custom CMS and rules engine allowing healthcare professionals to contextualize 25+ lab results with personalized next steps for patients."
+          description="Led the build of an interactive diagnostics platform, achieving a 200%+ increase in user engagement and 1.75x improvement in interaction rates. Developed a custom CMS and rules engine allowing healthcare professionals to contextualize 25+ lab results with personalized next steps for patients."
           companyUrl="https://ro.co"
           technologies={["React.js", "TypeScript", "Remix", "Python"]}
         />
@@ -45,7 +45,7 @@ export function Experience() {
           dateRange="2019 - 2020"
           title="Senior Frontend Developer"
           company="HashiCorp"
-          description="Built automated release workflows using GitHub Actions, Slack, and Asana that saved ~10 minutes per PR across 8 engineers and 10+ repositories. Developed CI-powered dashboards to catch high-severity issues pre-release and created AST-driven markdown plugins for documentation consistency."
+          description="Built automated release workflows using GitHub Actions, Slack, and Asana, saving ~10 minutes per PR across 8 engineers and 10+ repositories. Developed CI-powered dashboards to catch high-severity issues pre-release and created AST-driven markdown plugins for documentation consistency."
           companyUrl="https://hashicorp.com"
           technologies={[
             "React.js",
@@ -60,7 +60,7 @@ export function Experience() {
           dateRange="2018 - 2019"
           title="Senior Frontend Developer"
           company="Blinker"
-          description="Integrated React.js and Webpack with Contentful headless CMS using webhooks and automated builds. Engineered a modular webcam capture component leveraging browser APIs with real-time ML microservice integration for photo analysis."
+          description="Updated a static React.js application into a dynamic, CMS-powered, automated build through webhooks, saving hours on CI/CD overhead. Engineered a modular webcam capture component leveraging browser APIs with real-time ML microservice integration for photo analysis."
           technologies={["React.js", "Webpack", "Ruby on Rails", "Contentful"]}
         />
         <ExperienceItem
@@ -68,7 +68,7 @@ export function Experience() {
           dateRange="2016 - 2018"
           title="Frontend Developer"
           company="Warby Parker"
-          description="Simplified and decreased frontend build time by ~150%, reducing overall deployment times by an average of 10 minutes per deploy. Collaborated with customer experience team to build internal tools, decreasing support time by 1-2 minutes per phone call. Increased key e-commerce engagement statistics by ~10-15% utilizing A/B testing strategies."
+          description="Simplified a complicated, multi-step frontend build, reducing deployment times by an average of 10 minutes per deploy. Collaborated with customer experience team to build internal tools, decreasing support time by 1-2 minutes per phone call. Heavily leveraged A/B testing strategies to increase key e-commerce engagement statistics."
           companyUrl="https://www.warbyparker.com"
           technologies={[
             "JavaScript",
