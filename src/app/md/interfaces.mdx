@@ -1,0 +1,132 @@
+I recently hacked together a tiny [MCP server](https://github.com/pruett/dayta-mcp) for personal use. The initial plan: *just* build a dead-simple MCP server, explore the landscape of libraries and open-source tools, and move on. Nothing fancy. But like most experiments, scope creeped just a bit.
+
+After completing the minimal **MCP** server buildout, I wanted a bit of visualization aside from a text representation, so I built a small companion web **UI**. And to support that UI, I needed an **API**. Suddenly I had **three different interfaces** tied to the same functionality. It forced me to think: *What are the pros/cons/tradeoffs between the ways we talk with software? When is each useful?*
+
+This post is me thinking out loud about four core "interface styles": **MCP, API, UI, and CLI**–what they're good at, where they shine, and–where they don'.
+
+---
+
+We'll start in reverse chronological order with the newest "interface" and work our ways backwards in time to review the remaining.
+
+### MCP (Model Context Protocol) — The LLM-Native Interface
+
+As the newest "interface type' in the stack, MCP isn't for humans or machines directly—it’s for **LLMs to talk to tools**.
+
+**How it feels:**
+- You send loosely structured, natural-language-ish text into a black box
+- The “client” (an AI model) infers meaning and calls the right tool or method
+- Think: *“LLM, fetch my tasks and sort them by priority”* instead of crafting structured payloads
+
+**Why it’s interesting:**
+- Lowest friction for *humans* (we speak in intent)
+- Highest burden on *machines* (have to infer the intent)
+- Slower than a direct "tool" calls
+- It flips the traditional interface dynamic: **the “client” does most of the interpretation**
+
+**Early takeaways from my mini-project:**
+- Super flexible, with inference capabilities difficult to build into a more traditional "contract"
+- Zero-config for a human interacting through an LLM
+- Non-deterministic slot-machine like predictability which can be fun but annoying depending on the context
+- Harder to guarantee correctness
+
+### API (Application Programming Interface) — The Contract-First Interface
+
+Before MCP, the "headless" way to interact with machines was through an API
+
+**Traits:**
+- Strict, predictable, documented
+
+**Compared to MCP:**
+-  More reliable and consistent
+-  Less flexible (no LLM inference in tool calls etc.)
+-  Deterministic
+
+Taking a brief pause here. It was during the buildout of the API, after the MCP server was built that I shared 80-90% of the code between tool calls and API endpoints, but they felt fundamentally different. A lot has been written about the differences between these two interfaces. I don't have a strong take, but it was a bit of an odd programming bridge between the two.
+
+### UI (User Interface) — The Friendly Human Interface
+
+**Why it exists:**
+- Lowest barrier for humans
+- Offers guidance, visual affordances, error recovery, context
+
+**Nice for:**
+- Explaining functionality through visuals
+- Guardrails and constraints for regular users
+
+**Downsides:**
+- Slower to build
+- More surface area for bugs
+- Requires design + UX thinking
+
+In the context of this experiment, the UI made it *feel* real—and revealed friction that neither the API nor MCP exposed.
+
+### ⚙️ CLI — The Power User Interface
+
+The most “developer-efficient” human interface.
+
+**Characteristics:**
+- Strict, explicit, fast
+- Scriptable and composable
+- Zero ambiguity
+
+CLIs sit between API and UI: structured like an API, but operated by humans like a UI.
+
+Best when:
+- Power users want speed
+- Tasks are repetitive or automatable
+- You need precision
+
+---
+
+## Quick Comparison Table
+
+| Interface | Optimized For | Flexibility | Friction for Humans | Error Risk |
+|-----------|----------------|--------------|----------------------|--------------|
+| MCP | Intent & LLMs | High | Low | High (LLM interpretation) |
+| API | Machine contracts | Medium | Medium/High | Low |
+| UI | General users | Low | Lowest | Medium |
+| CLI | Power users & devs | Medium | Medium | Low |
+
+---
+
+## So… Which One Is “Best”?
+
+Obviously: *it depends.*
+Each interface serves a different “consumer” with different constraints.
+
+**If I had to reduce it to a bumper sticker:**
+
+- **MCP**: *Best when the consumer is an AI*
+- **API**: *Best when the consumer needs guarantees*
+- **UI**: *Best when the consumer is a human*
+- **CLI**: *Best when the human wants speed and control*
+
+---
+
+## What Surprised Me Building All Three
+
+A few reflections you could expand on:
+
+- MCP felt magical when it worked, but unpredictable when it didn’t
+- The UI immediately exposed UX pitfalls that weren't obvious in API/MCP layers
+- The API ended up being the “source of truth”
+- I kept thinking: *Will MCP replace APIs for devs?* (Early gut: probably not soon)
+
+---
+
+## Where I’m Taking This Next
+
+A couple directions for follow-ups:
+
+- Turning the MCP tool into a more opinionated assistant
+- Writing a guide on how to ship MCP + UI + API without duplicating logic
+- Experimenting with a CLI that wraps the API
+
+---
+
+## Wrap Up
+
+This wasn’t a grand experiment—just a weekend curiosity. But building **the same capability through MCP, API, UI, and (theoretical) CLI** was a fun way to feel the ergonomics of each.
+
+If you want to poke around the code, it’s here:
+👉 **https://github.com/pruett/dayta-mcp**

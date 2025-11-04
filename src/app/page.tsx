@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { Intro } from "@/app/_sections/intro";
 import { Experience } from "./_sections/experience";
+import { Projects } from "./_sections/projects";
+import { Writing } from "./_sections/writing";
 
 export default function Home() {
   return (
-    <main className="max-w-[72ch] mx-auto p-6 flex flex-col gap-10">
+    <main className="max-w-[72ch] mx-auto p-6 flex flex-col gap-15">
       {/* Header/Intro */}
       <Intro />
 
@@ -12,31 +14,15 @@ export default function Home() {
       <Experience />
 
       {/* Projects */}
-      <section
-        id="projects"
-        className="animate-fade-in [--stagger:7] flex flex-col gap-2"
-      >
-        <h2 className="font-medium text-lg">Projects</h2>
-        <p className="text-muted-foreground text italic font-serif">
-          Coming soon...
-        </p>
-      </section>
+      <Projects />
 
       {/* Writing */}
-      <section
-        id="writing"
-        className="animate-fade-in [--stagger:7] flex flex-col gap-2"
-      >
-        <h2 className="font-medium text-lg">Writing</h2>
-        <p className="text-muted-foreground text italic font-serif">
-          Coming soon...
-        </p>
-      </section>
+      <Writing />
 
       {/* Connect */}
       <section
         id="connect"
-        className="animate-fade-in [--stagger:7] flex flex-col gap-2"
+        className="animate-fade-in [--stagger:9] flex flex-col gap-2"
       >
         <h2 className="font-medium text-lg">Connect</h2>
         <div className="flex flex-wrap gap-4">

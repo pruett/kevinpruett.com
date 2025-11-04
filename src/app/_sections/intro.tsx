@@ -8,7 +8,7 @@ export function Intro() {
           Kevin Pruett
         </h1>
         <h2 className="text-base font-light animate-fade-in [--stagger:2]">
-          Frontend Engineer
+          Software Engineer
         </h2>
       </div>
       <div className="flex flex-col gap-4">
