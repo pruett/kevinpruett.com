@@ -24,7 +24,7 @@ export default function Page() {
       </PostMeta>
 
       <main className="flex flex-col gap-2">
-        <PostContent className="animate-fade-in [--stagger:3]">
+        <PostContent className="animate-fade-in [--stagger:3] font-inter">
           <Interfaces />
         </PostContent>
       </main>

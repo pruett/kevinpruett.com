@@ -16,19 +16,19 @@ const components = {
   ),
   h2: (props: HeadingProps) => (
     <h2
-      className="font-mono uppercase text-base tracking-wide text-gray-700 mt-12 mb-4"
+      className="font-mono uppercase text-base tracking-wide text-muted-foreground mt-12 mb-4"
       {...props}
     />
   ),
   h3: (props: HeadingProps) => (
     <h3
-      className="font-mono uppercase text-sm tracking-wide font-medium mt-10 mb-4"
+      className="font-mono uppercase text-sm tracking-wide font-bold mt-10 mb-4 text-muted-foreground/80"
       {...props}
     />
   ),
   h4: (props: HeadingProps) => (
     <h4
-      className="xfont-serif uppercase text-xs tracking-wide mb-3 text-muted-foreground"
+      className="font-mono uppercase text-xs tracking-wider mb-3 text-muted-foreground/70"
       {...props}
     />
   ),
@@ -36,13 +36,15 @@ const components = {
     <p className="text-base md:text-lg leading-relaxed mb-6" {...props} />
   ),
   ol: (props: ListProps) => (
-    <ol className="text-gray-800 list-decimal pl-5 space-y-2 mb-6" {...props} />
+    <ol className="list-decimal pl-5 space-y-2 mb-6" {...props} />
   ),
   ul: (props: ListProps) => (
-    <ul className="text-gray-800 list-disc pl-5 space-y-2 mb-6" {...props} />
+    <ul className="list-disc pl-5 space-y-2 mb-6" {...props} />
   ),
   li: (props: ListItemProps) => <li className="pl-1" {...props} />,
-  hr: () => <div className="my-16" />,
+  hr: () => (
+    <hr className="my-16 border-0 border-t border-gray-200 w-24 mx-auto" />
+  ),
   em: (props: ComponentPropsWithoutRef<"em">) => (
     <em className="font-medium" {...props} />
   ),
