@@ -11,8 +11,8 @@ export function Writing() {
       <div className="flex flex-col gap-3">
         <HoverLinkCard
           href="/interfaces"
-          title="MCP vs CLI vs UI"
-          description="A quick tour into interfaces both old and new."
+          title="Interfaces"
+          description="A quick explorationg into interfaces both old and new – from MCP to CLI"
           badge={
             <span className="text-xs text-muted-foreground font-mono uppercase">
               November 2025

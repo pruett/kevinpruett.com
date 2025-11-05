@@ -10,6 +10,10 @@ function Post({ className, ...props }: React.ComponentProps<"article">) {
   );
 }
 
+function PostMeta({ className, ...props }: React.ComponentProps<"div">) {
+  return <div data-slot="post-meta" className={cn("", className)} {...props} />;
+}
+
 function PostAuthor({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div data-slot="post-author" className={cn("", className)} {...props} />
@@ -20,6 +24,10 @@ function PostDate({ className, ...props }: React.ComponentProps<"time">) {
   return (
     <time data-slot="post-date" className={cn("", className)} {...props} />
   );
+}
+
+function PostTitle({ className, ...props }: React.ComponentProps<"h1">) {
+  return <h1 data-slot="post-title" className={cn("", className)} {...props} />;
 }
 
 function PostContent({ className, ...props }: React.ComponentProps<"div">) {
@@ -35,4 +43,4 @@ function PostContent({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-export { Post, PostAuthor, PostContent, PostDate };
+export { Post, PostMeta, PostAuthor, PostTitle, PostContent, PostDate };

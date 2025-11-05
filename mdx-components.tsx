@@ -15,22 +15,34 @@ const components = {
     <h1 className="font-medium pt-12 text-xl fade-in" {...props} />
   ),
   h2: (props: HeadingProps) => (
-    <h2 className="text-gray-800 font-bold text-lg mt-8 mb-3" {...props} />
+    <h2
+      className="font-mono uppercase text-base tracking-wide text-gray-700 mt-12 mb-4"
+      {...props}
+    />
   ),
   h3: (props: HeadingProps) => (
-    <h3 className="text-gray-800 font-medium mt-8 mb-3" {...props} />
+    <h3
+      className="font-mono uppercase text-sm tracking-wide font-medium mt-10 mb-4"
+      {...props}
+    />
   ),
-  h4: (props: HeadingProps) => <h4 className="font-medium" {...props} />,
+  h4: (props: HeadingProps) => (
+    <h4
+      className="xfont-serif uppercase text-xs tracking-wide mb-3 text-muted-foreground"
+      {...props}
+    />
+  ),
   p: (props: ParagraphProps) => (
-    <p className="text-foreground/85 leading-relaxed" {...props} />
+    <p className="text-base md:text-lg leading-relaxed mb-6" {...props} />
   ),
   ol: (props: ListProps) => (
-    <ol className="text-gray-800 list-decimal pl-5 space-y-2" {...props} />
+    <ol className="text-gray-800 list-decimal pl-5 space-y-2 mb-6" {...props} />
   ),
   ul: (props: ListProps) => (
-    <ul className="text-gray-800 list-disc pl-5 space-y-1" {...props} />
+    <ul className="text-gray-800 list-disc pl-5 space-y-2 mb-6" {...props} />
   ),
   li: (props: ListItemProps) => <li className="pl-1" {...props} />,
+  hr: () => <div className="my-16" />,
   em: (props: ComponentPropsWithoutRef<"em">) => (
     <em className="font-medium" {...props} />
   ),
@@ -38,7 +50,7 @@ const components = {
     <strong className="font-medium" {...props} />
   ),
   a: ({ href, children, ...props }: AnchorProps) => {
-    const className = "text-blue-500 hover:text-blue-700";
+    const className = "link";
     if (href?.startsWith("/")) {
       return (
         <Link href={href} className={className} {...props}>
