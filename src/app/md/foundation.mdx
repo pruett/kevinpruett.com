@@ -1,0 +1,50 @@
+My goal is to understand software engineering in the AI era. In order to do so, I need to first approach the topic from first principles. My aim with this post, is to simply define the core elements that comprise AI-assisted software engineering and continue building upon this knowlege.
+
+**Be warned. There's a non-zero chance that portions of this post will either be incorrect, outdated, or both. In fact, I expect that to be the case.**
+
+So, let's dive in. First up, let's understand what an LLM actually *is*.
+
+## LLM (Large Language Model)
+
+Large language models are giant datasets trained on huge amounts of text data with the purpose of understanding human language. With regard to how they're trained, the machine learning involved, techniques and algorithms used to compute relationships between words, etc. – let's skip that for now. LLMs have a knowledge cutoff date, so their internal understanding of the world is time bound. They excel at understanding and generating human language. LLMs generate their output based on predicting the next **"token"** (we'll cover tokens next) given a sequence of previous tokens. Additionally, not all LLMs are the same in that they are built for different tasks. This is important to keep in mind as you perform different tasks – choosing different models will likely yield different quality results.
+
+*One important aspect of LLMs in general, especially with regard to software engineering is their probabilistic nature. In other words, LLMs are not determinisitic. This flies in the face of software engineering principles largely where "good" software is predictable in nature. Being non-deterministic, LLMs have a tendency of halucinating their responses, returning false and/or made up results. This is a widely known characteristic of LLMs, but in the context of software engineering, a huge liability. Given software engineering principles, working with LLMs has mostly become an exercise of working with these unpredictable black boxes in a way that's predictable and effective.*
+
+## Tokens
+
+Tokens are ["common sequences of characters found in a set of text"](https://platform.openai.com/tokenizer). They are _the_ unit of information that LLMs work with. The LLM ingests a text input (for example, a user prompt) and in turn, slices up the input into groupings called **tokens**. LLMs create a statistical relationship between these tokens allowing them to produce the next token in the sequence – similar to autocomplete. Importantly, tokens are used as the economic unit when interacting with models. LLMs charge per token, both input and output, where output tokens are typically more expensive. Essentially, the more tokens provided to (and subsequently returned by) LLMs, the more costly the interaction will be with the LLM.
+
+The concept of tokens spans beyond just pricing. Understanding tokens and its effects on results is a critical concept to understand when trying to get the most out of LLMs. More to come on this topic.
+
+## Context
+
+Every LLM has a maxiumum amount of tokens that it can handle at a given time. This threshold is referred to as the **context window**. We can think of this context in a similar way to the amount of information humans can hold in their head, in that it's finite. If you're anything like me, your context window is small – just ask my wife. Similarly, LLMs can only process a limited number of tokens at any given time. At the time of writing, most LLMs advertise a 200,000 token limit, or context window. It's important to understand that the context window is comprised of both input and ouput. Said differently, your input prompt(s) as well as the LLM's response(s) counts towards this number. And as the conversation continues, the context will continue to increase until eventually the context window is exceeded.
+
+Despite some LLMs boasting a 1M token context window, in reality the number is closer to 175k for most models. And most importantly, getting the most out of LLMs, that is – getting the best results, requires keeping this context to its absolute minimum. In other words, the larger the context, the more likely you are to receive less relevant, or even incorrect results. This is sometimes referred to as [context rot](https://research.trychroma.com/context-rot). Most folks try to keep their context window somewhere in the < 50% utilization zone. This effort of maximimizing for context, is referred to as **context engineering**.
+
+## Agents
+
+AI agents are all the rage. Everyone is building them. New ones come out daily. But what makes an agent...truly "agentic"? Luckily, agents are fairly straightforward, albeit powerful wrappers that operate on top of LLMs. They a) run in a loop and b) perform tool calls/operations. That's it. Practically speaking, an agent process would look something like: agents start the loop, collects the initial user message, runs inference on the LLM, collects any tool calls, performs tools calls, adds those calls/results to the message thread, and repeats until no tool calls remain. It's able to maintain a conversation between the LLM and itself and run until the job is done.
+
+## Tools
+
+We've talked about tools when discussing agents. What exactly is a tool? Simply, tools are extended capabilities afforded to the model. So for instance, in the case of a coding agent like Claude Code, the ability to read files in the filesystem would be an important capability. So Claude Code has a built in tool specifically designed to do just that. Tools allow us to extend the LLM's functionality by defining them and allowing the LLM to invoke said tool when it deems it appropriate.
+
+A snippet of code representing a tool for reading a file could look like the following:
+
+```go
+var ReadFileDefinition = ToolDefinition{
+	Name:        "read_file",
+	Description: "Reads the contents of a given relative file path. Use this when you want to see what's inside a file. Do not use this with directory names.",
+	InputSchema: ReadFileInputSchema,
+	Function:    ReadFile,
+}
+```
+
+It's important to note that the Name, `read_file` and the Description, `Reads the contents...` are **immediately** loaded into the context window upon initializing the agent. So when you start an agent, like Claude Code, your context window will already include capabiities like reading and writing to files as this is an essential feature to any coding assistant. As a result, the model will now have this extended capability afforded to it as you (or the agent) is conversing with it.
+
+----
+
+Lots more to cover, but these are the foundational concepts that define the space. In the future I'll talk more about context engineering (aka getting the most out of your LLM), planning projects with LLMs, task execution, etc.
+
+The concepts discussed in this post have drastic effects on the how the industry of software engineering now operates. Leveraging the tools appropriately can significantly increase one's productivity. Leveraged incorrectly, the same is true in reverse. That's why it is so important to learn the underlying mechanisms of how these tools work not only in isolation but in unison to create the desired outcome.
