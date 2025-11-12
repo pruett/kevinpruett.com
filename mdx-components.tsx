@@ -15,25 +15,19 @@ const components = {
     <h1 className="font-medium pt-12 text-xl fade-in" {...props} />
   ),
   h2: (props: HeadingProps) => (
-    <h2
-      className="font-mono uppercase text-base tracking-wide text-muted-foreground mt-12 mb-4"
-      {...props}
-    />
+    <h2 className="text-lg font-medium mt-12 mb-4" {...props} />
   ),
   h3: (props: HeadingProps) => (
-    <h3
-      className="font-mono uppercase text-sm tracking-wide font-bold mt-10 mb-4 text-muted-foreground/80"
-      {...props}
-    />
+    <h3 className="text-base font-medium mt-10 mb-4" {...props} />
   ),
   h4: (props: HeadingProps) => (
     <h4
-      className="font-mono uppercase text-xs tracking-wider mb-3 text-muted-foreground/70"
+      className="text-base mb-3 font-medium text-muted-foreground/70"
       {...props}
     />
   ),
   p: (props: ParagraphProps) => (
-    <p className="text-base md:text-lg leading-relaxed mb-6" {...props} />
+    <p className="text-base leading-relaxed mb-6" {...props} />
   ),
   ol: (props: ListProps) => (
     <ol className="list-decimal pl-5 space-y-2 mb-6" {...props} />

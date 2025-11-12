@@ -10,8 +10,8 @@ export function Writing() {
 
       <div className="flex flex-col gap-3">
         <HoverLinkCard
-          href="/foundation"
-          title="AI Foundation"
+          href="/ai-foundations"
+          title="AI Foundations"
           description="Software engineering in the AI era – from first principles. Part 1. An overview of some core concepts from: LLMs, tokens, context, agents, and tools."
           badge={
             <span className="text-xs text-muted-foreground font-mono uppercase">

@@ -10,7 +10,8 @@
       "mcp__shadcn__get_item_examples_from_registries",
       "WebFetch(domain:www.kevinpruett.com)",
       "mcp__playwright__browser_navigate",
-      "WebFetch(domain:devouringdetails.com)"
+      "WebFetch(domain:devouringdetails.com)",
+      "mcp__playwright__browser_evaluate"
     ],
     "deny": [],
     "ask": []

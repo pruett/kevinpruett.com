@@ -1,4 +1,4 @@
-import Foundation from "@/app/md/foundation.mdx";
+import AIFoundations from "@/app/md/ai-foundations.mdx";
 import {
   Post,
   PostAuthor,
@@ -25,7 +25,7 @@ export default function Page() {
 
       <main className="flex flex-col gap-2">
         <PostContent className="animate-fade-in [--stagger:3] font-inter">
-          <Foundation />
+          <AIFoundations />
         </PostContent>
       </main>
     </Post>

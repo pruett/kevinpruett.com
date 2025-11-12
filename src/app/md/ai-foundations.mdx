@@ -1,6 +1,18 @@
+import { CodeBlock, CodeBlockCopyButton } from "@/components/ai-elements/code-block";
+import { Info } from './info'
+
+export const metadata = {
+    title: "AI Foundations",
+    description: "An introduction to AI foundations",
+    keywords: ["AI", "Foundations", "Software Engineering"],
+};
+
 My goal is to understand software engineering in the AI era. In order to do so, I need to first approach the topic from first principles. My aim with this post, is to simply define the core elements that comprise AI-assisted software engineering and continue building upon this knowlege.
 
-**Be warned. There's a non-zero chance that portions of this post will either be incorrect, outdated, or both. In fact, I expect that to be the case.**
+
+<Info>
+Be warned. There's a non-zero chance that portions of this post will either be incorrect, outdated, or both. In fact, I expect that to be the case.
+</Info>
 
 So, let's dive in. First up, let's understand what an LLM actually *is*.
 
@@ -8,7 +20,7 @@ So, let's dive in. First up, let's understand what an LLM actually *is*.
 
 Large language models are giant datasets trained on huge amounts of text data with the purpose of understanding human language. With regard to how they're trained, the machine learning involved, techniques and algorithms used to compute relationships between words, etc. – let's skip that for now. LLMs have a knowledge cutoff date, so their internal understanding of the world is time bound. They excel at understanding and generating human language. LLMs generate their output based on predicting the next **"token"** (we'll cover tokens next) given a sequence of previous tokens. Additionally, not all LLMs are the same in that they are built for different tasks. This is important to keep in mind as you perform different tasks – choosing different models will likely yield different quality results.
 
-*One important aspect of LLMs in general, especially with regard to software engineering is their probabilistic nature. In other words, LLMs are not determinisitic. This flies in the face of software engineering principles largely where "good" software is predictable in nature. Being non-deterministic, LLMs have a tendency of halucinating their responses, returning false and/or made up results. This is a widely known characteristic of LLMs, but in the context of software engineering, a huge liability. Given software engineering principles, working with LLMs has mostly become an exercise of working with these unpredictable black boxes in a way that's predictable and effective.*
+One important aspect of LLMs in general, especially with regard to software engineering is their probabilistic nature. In other words, LLMs are not determinisitic. This flies in the face of software engineering principles largely where "good" software is predictable in nature. Being non-deterministic, LLMs have a tendency of halucinating their responses, returning false and/or made up results. This is a widely known characteristic of LLMs, but in the context of software engineering, a huge liability. Given software engineering principles, working with LLMs has mostly become an exercise of working with these unpredictable black boxes in a way that's predictable and effective.
 
 ## Tokens
 
@@ -32,14 +44,13 @@ We've talked about tools when discussing agents. What exactly is a tool? Simply,
 
 A snippet of code representing a tool for reading a file could look like the following:
 
-```go
-var ReadFileDefinition = ToolDefinition{
-	Name:        "read_file",
-	Description: "Reads the contents of a given relative file path. Use this when you want to see what's inside a file. Do not use this with directory names.",
-	InputSchema: ReadFileInputSchema,
-	Function:    ReadFile,
-}
-```
+<CodeBlock code={`var ReadFileDefinition = ToolDefinition{
+    Name:        "read_file",
+    Description: "Reads the contents of a given relative file path. Use this when you want to see what's inside a file. Do not use this with directory names.",
+    InputSchema: ReadFileInputSchema,
+    Function:    ReadFile,
+}`
+} language={"go"} className="mb-8" />
 
 It's important to note that the Name, `read_file` and the Description, `Reads the contents...` are **immediately** loaded into the context window upon initializing the agent. So when you start an agent, like Claude Code, your context window will already include capabiities like reading and writing to files as this is an essential feature to any coding assistant. As a result, the model will now have this extended capability afforded to it as you (or the agent) is conversing with it.
 
