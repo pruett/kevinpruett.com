@@ -75,7 +75,14 @@ const components = {
   },
   code: ({ children, ...props }: ComponentPropsWithoutRef<"code">) => {
     const codeHTML = highlight(children as string);
-    return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
+    return (
+      <code
+        className="bg-muted text-muted-foreground pointer-events-none inline-flex h-5 w-fit min-w-5 items-center justify-center gap-1 rounded-sm px-1 font-mono text-sm"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: necessary for <code>
+        dangerouslySetInnerHTML={{ __html: codeHTML }}
+        {...props}
+      />
+    );
   },
   Table: ({ data }: { data: { headers: string[]; rows: string[][] } }) => (
     <table>
