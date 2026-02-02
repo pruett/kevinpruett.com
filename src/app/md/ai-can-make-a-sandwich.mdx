@@ -13,6 +13,8 @@ There's a famous exercise in introductory programming courses. You ask a student
 
 Then you, the instructor, act as a "dumb computer" and follow the instructions *literally*. You grab the entire loaf. You smear peanut butter on the crust. Chaos ensues. The lesson: computers are stupid. They do exactly what you tell them. Nothing more, nothing less. As engineers, our job was to think through every edge case, every micro-step, every possible interpretation.
 
+![Assembly diagram PB&J-01: exploded view of sandwich components](/images/sandwich-blueprint.png)
+
 Chris Pine's [*Learn to Program*](https://pragprog.com/titles/ltp3/learn-to-program-third-edition/) captures this beautifully. The computer doesn't know what a sandwich *is*. It doesn't know that bread comes in slices, that jars have lids, that knives exist. You must teach it everything, explicitly, painstakingly.
 
 For decades, this was the foundational mental model of software engineering: **you are the brain, the computer is the muscle.**
@@ -82,6 +84,8 @@ Consider two prompts:
 The second prompt lets the model draw on everything it knows about title case — edge cases, language conventions, idiomatic implementations in whatever language you're using. The first prompt forces a specific (and probably suboptimal) implementation.
 
 The engineer who wrote the first prompt was doing what they were trained to do: being explicit. But in the LLM context, that explicitness became a constraint.
+
+![Technical blueprint: Neural input-output system — HUNGRY input, LATENT_SPACE processing, SANDWICH_PROCEDURE output](/images/latent-space-blueprint.png)
 
 ---
 
