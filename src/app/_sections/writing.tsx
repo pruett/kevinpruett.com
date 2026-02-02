@@ -10,6 +10,18 @@ export function Writing() {
 
       <div className="flex flex-col gap-3">
         <HoverLinkCard
+          href="/ai-can-make-a-sandwich"
+          title="AI Can Make a Sandwich"
+          description="On letting go of explicit instruction and trusting what LLMs already know"
+          badge={
+            <span className="text-xs text-muted-foreground font-mono uppercase">
+              February 2026
+            </span>
+          }
+        />
+      </div>
+      <div className="flex flex-col gap-3">
+        <HoverLinkCard
           href="/ai-foundations"
           title="AI Foundations"
           description="Software engineering in the AI era – from first principles. Part 1. An overview of some core concepts from: LLMs, tokens, context, agents, and tools."
