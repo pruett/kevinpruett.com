@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Intro } from "@/app/_sections/intro";
 import { Experience } from "./_sections/experience";
-import { Projects } from "./_sections/projects";
 import { Writing } from "./_sections/writing";
 
 export default function Home() {
@@ -12,9 +11,6 @@ export default function Home() {
 
       {/* Experience */}
       <Experience />
-
-      {/* Projects */}
-      <Projects />
 
       {/* Writing */}
       <Writing />
