@@ -10,8 +10,8 @@ export function Writing() {
 
       <div className="flex flex-col gap-3">
         <HoverLinkCard
-          href="/ai-can-make-a-sandwich"
-          title="AI Can Make a Sandwich"
+          href="/ai-already-makes-sandwiches"
+          title="AI Already Makes Sandwiches"
           description="On letting go of explicit instruction and trusting what LLMs already know"
           badge={
             <span className="text-xs text-muted-foreground font-mono uppercase">

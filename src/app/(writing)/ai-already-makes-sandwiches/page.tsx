@@ -1,4 +1,4 @@
-import AiCanMakeASandwich from "@/app/md/ai-can-make-a-sandwich.mdx";
+import AiCanMakeASandwich from "@/app/md/ai-already-makes-sandwiches.mdx";
 import {
   Post,
   PostAuthor,
@@ -12,14 +12,14 @@ export default function Page() {
   return (
     <Post className="flex flex-col gap-15">
       <PostMeta className="flex flex-col gap-3 animate-fade-in [--stagger:1]">
-        <PostTitle className="text-xl font-medium">AI Can Make a Sandwich</PostTitle>
+        <PostTitle className="text-xl font-medium">
+          AI Already Makes Sandwiches
+        </PostTitle>
         <div>
           <PostAuthor className="text-base font-normal">
             Kevin Pruett
           </PostAuthor>
-          <PostDate className="text-base font-light">
-            February 2, 2026
-          </PostDate>
+          <PostDate className="text-base font-light">February 2, 2026</PostDate>
         </div>
       </PostMeta>
 
