@@ -23,6 +23,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kevinpruett.com"),
   title: "Kevin Pruett",
   description: "Personal site and portfolio",
 };

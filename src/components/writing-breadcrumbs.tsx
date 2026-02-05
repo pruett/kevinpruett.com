@@ -1,8 +1,8 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import Link from "next/link";
 import { Home } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -13,9 +13,9 @@ import {
 } from "@/components/ui/breadcrumb";
 
 const articleTitles: Record<string, string> = {
-  "ai-can-make-a-sandwich": "AI Can Make a Sandwich",
+  "llms-can-make-sandwiches": "LLMs Can Make Sandwiches",
   "ai-foundations": "AI Foundations",
-  "interfaces": "Interfaces",
+  interfaces: "Interfaces",
 };
 
 function slugToTitle(slug: string): string {
