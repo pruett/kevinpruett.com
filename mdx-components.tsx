@@ -111,7 +111,7 @@ const components = {
       {...props}
     />
   ),
-  img: ({ src, alt, ...props }: ComponentPropsWithoutRef<"img">) => (
+  img: ({ src, alt }: { src?: string; alt?: string }) => (
     <span className="block relative my-8 w-[calc(100%+(50vw-50%-1.5rem))]">
       <Image
         src={src || ""}
@@ -119,7 +119,6 @@ const components = {
         width={1200}
         height={800}
         className="w-full h-auto rounded-lg"
-        {...props}
       />
       {alt && (
         <span className="block text-sm text-muted-foreground mt-2 italic">
