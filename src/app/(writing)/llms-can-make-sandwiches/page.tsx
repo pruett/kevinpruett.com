@@ -1,4 +1,4 @@
-import AiCanMakeASandwich from "@/app/md/ai-already-makes-sandwiches.mdx";
+import MDXContent from "@/app/md/llms-can-make-sandwiches.mdx";
 import {
   Post,
   PostAuthor,
@@ -13,7 +13,7 @@ export default function Page() {
     <Post className="flex flex-col gap-15">
       <PostMeta className="flex flex-col gap-3 animate-fade-in [--stagger:1]">
         <PostTitle className="text-xl font-medium">
-          AI Already Makes Sandwiches
+          LLMs Can Make Sandwiches
         </PostTitle>
         <div>
           <PostAuthor className="text-base font-normal">
@@ -25,7 +25,7 @@ export default function Page() {
 
       <main className="flex flex-col gap-2">
         <PostContent className="animate-fade-in [--stagger:3] font-inter">
-          <AiCanMakeASandwich />
+          <MDXContent />
         </PostContent>
       </main>
     </Post>
