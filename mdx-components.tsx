@@ -1,4 +1,5 @@
 import type { MDXComponents } from "mdx/types";
+import Image from "next/image";
 import Link from "next/link";
 import type { ComponentPropsWithoutRef } from "react";
 import { highlight } from "sugar-high";
@@ -15,10 +16,10 @@ const components = {
     <h1 className="font-medium pt-12 text-xl fade-in" {...props} />
   ),
   h2: (props: HeadingProps) => (
-    <h2 className="text-lg font-medium mt-12 mb-4" {...props} />
+    <h2 className="text-lg font-medium mt-12 mb-4 scroll-mt-20" {...props} />
   ),
   h3: (props: HeadingProps) => (
-    <h3 className="text-base font-medium mt-10 mb-4" {...props} />
+    <h3 className="text-base font-medium mt-10 mb-4 scroll-mt-20" {...props} />
   ),
   h4: (props: HeadingProps) => (
     <h4
@@ -109,6 +110,23 @@ const components = {
       className="ml-[0.075em] border-l-2 border-muted-foreground/40 pl-4"
       {...props}
     />
+  ),
+  img: ({ src, alt, ...props }: ComponentPropsWithoutRef<"img">) => (
+    <span className="block relative my-8 w-[calc(100%+(50vw-50%-1.5rem))]">
+      <Image
+        src={src || ""}
+        alt={alt || ""}
+        width={1200}
+        height={800}
+        className="w-full h-auto rounded-lg"
+        {...props}
+      />
+      {alt && (
+        <span className="block text-sm text-muted-foreground mt-2 italic">
+          {alt}
+        </span>
+      )}
+    </span>
   ),
 } satisfies MDXComponents;
 

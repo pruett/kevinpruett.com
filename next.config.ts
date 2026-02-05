@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
   },
 };
 
-const withMDX = createMDX({});
+const withMDX = createMDX({
+  options: {
+    rehypePlugins: ["rehype-slug"],
+  },
+});
 
 export default withMDX(nextConfig);
