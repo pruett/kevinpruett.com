@@ -1,4 +1,3 @@
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { HoverLinkCard } from "@/components/hover-link-card";
 
 export function Projects() {
@@ -11,16 +10,13 @@ export function Projects() {
 
       <div className="flex flex-col gap-3">
         <HoverLinkCard
-          href="https://github.com/pruett/dayta-mcp"
-          title="dayta-mcp"
-          icon={<GitHubLogoIcon className="size-4" />}
-          external
-          description={
-            <>
-              A local-first MCP server for tracking daily <strong>tasks</strong>,{" "}
-              <strong>habits</strong>, and&nbsp;
-              <strong>reflections.</strong>
-            </>
+          href="/fleet"
+          title="Fleet"
+          description="A companion web dashboard for AI coding agents. Real-time transcripts, session search, and multi-device access — no config required."
+          badge={
+            <span className="text-xs text-muted-foreground font-mono uppercase">
+              Open Source
+            </span>
           }
         />
       </div>
