@@ -13,7 +13,7 @@ export function Intro() {
       </div>
       <div className="flex flex-col gap-4">
         <p className="dark:font-light text-base animate-fade-in [--stagger:3]">
-          I turn messy product ideas into polished, performant, and scalable web
+          I turn messy product ideas into polished, performant, scalable web
           applications. I care deeply about the details that quietly shape
           extraordinary digital experiences.
         </p>
