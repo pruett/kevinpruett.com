@@ -8,14 +8,14 @@ export function Intro() {
           Kevin Pruett
         </h1>
         <h2 className="text-base font-light animate-fade-in [--stagger:2]">
-          Software Engineer
+          Senior Product Engineer
         </h2>
       </div>
       <div className="flex flex-col gap-4">
         <p className="dark:font-light text-base animate-fade-in [--stagger:3]">
-          I build interfaces that are thoughtful, reliable, and performant. I
-          care deeply about the details that quietly shape extraordinary digital
-          experiences.
+          I turn messy product ideas into polished, performant, and scalable web
+          applications. I care deeply about the details that quietly shape
+          extraordinary digital experiences.
         </p>
         <p className="animate-fade-in [--stagger:4]">
           In the past, I&rsquo;ve led teams, shaped products, and built systems
